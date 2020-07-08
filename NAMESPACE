@@ -1,0 +1,18 @@
+# exportPattern("^[[:alpha:]]+")
+
+export(haploSep)
+export(haploSelect)
+export(haploMatch)
+export(plot.haplo)
+S3method(plot, haplo)
+
+importFrom("stats", "quantile", "sd", "hclust", "cutree", "median")
+importFrom("graphics", "par")
+importFrom("limSolve", "lsei")
+importFrom("superheat", "superheat")
+importFrom("gridExtra", "grid.arrange")
+importFrom("utils", "stack", "globalVariables")
+importFrom("ggplot2", "ggplot", "geom_line",
+           "aes", "labs", "theme", "element_text",
+           "element_blank", "geom_polygon",
+           "scale_x_continuous", "ylim")
