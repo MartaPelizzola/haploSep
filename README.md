@@ -20,5 +20,7 @@ library(haploSep)
 
 # Authors
 Merle Behr (merle.behr@berkeley.edu)
+
 Housen Li (housen.li@mathematik.uni-goettingen.de)
+
 Marta Pelizzola (marta.pelizzola@vetmeduni.ac.at)
