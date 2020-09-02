@@ -27,11 +27,11 @@
 Function for plotting objects from class haplo
 }
 \examples{
-  data(ExampleDataset)
+ data(ExampleDataset)
+ m <- haploSelect(data = Y)
+ reconstruction <- haploSep(data = Y, nHaplo = m, stabEval = TRUE, bias = TRUE)
+ 
+ plot.haplo(reconstruction, type = "both")
 
-  m <- haploSelect(data = Y)
-  reconstruction <- haploSep(data = Y, nHaplo = m, stabEval = TRUE, bias = TRUE)
-
-  plot.haplo(reconstruction, type = "both")
 
 }

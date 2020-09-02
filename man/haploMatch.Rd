@@ -19,18 +19,15 @@ is number of candidate haploypes.}
 Integer vector with indexes of haploStrB which fit haploStrA best.
 }
 \description{
-For a set of given haplotypes finds the best matching haplotypes from a
+For a set of given haplotypes finds best matching haplotypes from a
 canditate list with loss function being the number of non equal elements.
 }
 \examples{
-Compare the reconstruction with 3 dominant haplotypes to the one with 7 dominant haplotypes
-
-data(ExampleDataset)
-
-reconstruction1 <- haploSep(data = Y, nHaplo = 3, stabEval = FALSE, bias = TRUE)
-
-reconstruction2 <- haploSep(data = Y, nHaplo = 7, stabEval = FALSE, bias = TRUE)
-
-haploMatch(reconstruction1$haploStr, reconstruction2$haploStr)
-
+ Compare the reconstruction with 3 dominant haplotypes to the one with 7 dominant haplotypes
+ data(ExampleDataset)
+ reconstruction1 <- haploSep(data = Y, nHaplo = 3, stabEval = FALSE, bias = TRUE)
+ reconstruction2 <- haploSep(data = Y, nHaplo = 7, stabEval = FALSE, bias = TRUE)
+ haploMatch(reconstruction1$haploStr, reconstruction2$haploStr)
+ 
+ 
 }

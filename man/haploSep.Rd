@@ -18,8 +18,8 @@ haploSep(
 \item{data}{Numeric observation matrix with nrow(data) being the number of
 SNP locations and ncol(data) the number of samples (e.g. time points).}
 
-\item{nHaplo}{Integer value which gives the number of dominant haplotypes
-for which haplotype structure and frequencies should be estimated from the
+\item{nHaplo}{Integer value which gives the number of essential haplotypes
+for which haplotype structure and frequency should be estimated from the
 mixture. When missing, it is estimated via the SVD criterion.}
 
 \item{stabEval}{logical. If \code{TRUE} (default), the stability analysis
@@ -50,7 +50,7 @@ which is an object from class haplo.
 \item
 \code{haploFrq} is a matrix with \code{nrow(haploFrq) = nHaplo}
 and \code{ncol(haploFrq) = ncol(data)} which gives the estimated
- frequency of the essential haplotypes.
+ frequency of the estimated essential haplotypes.
 \item
 \code{haplotStr} is a matrix with \code{nrow(haploStr) = nrow(data)}
  and \code{ncol(haploStr) = nHaplo} and entries being either 0 or 1.
@@ -74,10 +74,8 @@ the estimated haplotype frequency. This is a data frame, containing
 "\code{lowerBnd}" and "\code{upperBnd}" for each haplotype, which are
  0.025 and 0.975 quantiles for the bootstrap samples, respectively.
 \item
-The attribute "\code{stabScoreStr}" is a numeric vector of length
-\code{nHaplo} with values between 0 and 1. It indicates the 
-accuracy of the reconstructed haplotype structure for each
-haplotype.
+The attribute "\code{stabScoreStr}" is the a numeric vector of length
+\code{nHaplo} with values between 0 and 1.
 }
 }
 \description{
@@ -86,13 +84,12 @@ structure of essential haplotypes as well as their relative proportion from
 allele frequency matrix of mixture.
 }
 \examples{
-  1. Reconstruct 5 haplotypes
-  data(ExampleDataset)
-  haploSep(data = Y, nHaplo = 5, stabEval = TRUE, bias = TRUE)
-  
-  2. Choose the number of haplotypes to be reconstructed with haploSelect
-  data(ExampleDataset)
-  m <- haploSelect(data = Y)
-  haploSep(data = Y, nHaplo = m, stabEval = TRUE, bias = TRUE)
-
+ 1. Reconstruct 5 haplotypes
+ data(ExampleDataset)
+ haploSep(data = Y, nHaplo = 5, stabEval = TRUE, bias = TRUE)
+ 
+ Choose the number of haplotypes to be reconstructed with haploSelect
+ data(ExampleDataset)
+ m <- haploSelect(data = Y, bias = TRUE)
+ haploSep(data = Y, nHaplo = m, stabEval = TRUE, bias = TRUE)
 }

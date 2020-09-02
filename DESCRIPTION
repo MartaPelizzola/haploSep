@@ -3,7 +3,7 @@ Type: Package
 Title: Haplotype Separation with Finite Alphabet Lloyds algorithm
 Version: 0.1.0
 Author: Merle Behr, Housen Li and Marta Pelizzola
-Maintainer: Merle Behr <behr@berkeley.edu>
+Maintainer: Merle Behr <behr@berkeley.edu>, Housen Li <housen.li@mathematik.uni-goettingen.de>, Marta Pelizzola <marta.pelizzola@vetmeduni.ac.at>
 Description: Implementation of an iterative Lloyds type algorithm to separate multiple haplotypes from allele frequency data.
              The number of haplotypes is estimated via singular value thresholding. 
              Then, the haplotype frequency matrix is initialized via a pre-clustering of the allele frequencies and an absolute value ordering of the centers.
@@ -11,6 +11,6 @@ Description: Implementation of an iterative Lloyds type algorithm to separate mu
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
 Imports: limSolve, stats, superheat, gridExtra, ggplot2, utils, graphics
 Suggests: testthat

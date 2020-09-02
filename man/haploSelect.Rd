@@ -14,13 +14,9 @@ SNP locations and ncol(data) the number of samples (e.g. time points).}
 integer. The estimated number of essential haplotypes.
 }
 \description{
-For an observed data set of allele frequencies finds the 
-estimated number of dominant haplotypes given the 
-observed allele frequency changes.
+More details
 }
 \examples{
-data(ExampleDataset)
-
-haploSelect(data = Y)
-
+ data(ExampleDataset)
+ haploSelect(data = Y)
 }
