@@ -5,7 +5,6 @@ export(haploMatch)
 export(haploSelect)
 export(haploSep)
 export(haploSimulate)
-export(haploPlot)
 
 importFrom("stats", "quantile", "sd", "hclust", "cutree", "median")
 importFrom("graphics", "par")
