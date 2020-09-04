@@ -58,6 +58,10 @@ haploSimulate <- function(hp_str, Ne, tp, meancov=NULL, hp0 = NULL, benef_all=NU
   if (missing(tp)){
     stop("Time points of interest are required to simulate the haplotype frequencies")
   }
+  if (!is.matrix(hp_str)){
+    hp_str <- as.matrix(hp_str)
+    warning("The haplotype structure was not of matrix type and it is now converted to a matrix")
+  }
   if ((sum(hp_str == 0) + sum(hp_str==1))!=length(hp_str)){
     stop("All entries in the haplotype structure matrix 'hp_str' needs to be 0/1")
   }
