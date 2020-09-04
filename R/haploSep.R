@@ -88,7 +88,7 @@ haploSep <- function(data, nHaplo, stabEval = TRUE, bias = TRUE, weight = NULL,
   al    = c(0,1) # Numeric vector which gives the possible values in the
                  # haplotype structure. By defauls al = c(0,1) corresponding
                  # to allel 0 and 1
-  relax = TRUE   # Logical value indicating whether unit sum restriction on
+  relax = ifelse(is.null(weight), TRUE, FALSE)   # Logical value indicating whether unit sum restriction on
                  # weights should be relaxed.
   tsh   = 1e-3 # Numeric value between 0 and 1 which provides a threshold
                # criterion to the interative Lloyds algorithm. When all
