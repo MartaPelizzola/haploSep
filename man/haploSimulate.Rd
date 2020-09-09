@@ -65,5 +65,7 @@ meancov = 80
 hp0 = c(0.1,0.3,0.2, 0.05, 0.35)
 benef_all = c(1,3)
 s = c(0.05,0,0.2,rep(0,7))
-
+haploSimulate(hp_str, Ne, tp, meancov) #to simulate under neutrality. All haplotypes starting with equal frequency
+haploSimulate(hp_str, Ne, tp, meancov, hp0) #to simulate under neutrality. Custom starting haplotype frequency.
+haploSimulate(hp_str, Ne, tp, meancov,  benef_all, s) #to simulate with selection
 }
