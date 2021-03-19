@@ -99,6 +99,7 @@ haploSimulate <- function(hp_str, Ne, tp, meancov=NULL, hp0 = NULL, benef_all=NU
   
   # simulate allele frequencies over time
   while(g <= max(tp)) {
+    fitness_hp <- rep(1,max.len)
     if (sum(s!=0)>0){
       #apply selection
       for (i in 1:ncol(hp_str)){
