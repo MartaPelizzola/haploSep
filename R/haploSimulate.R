@@ -104,7 +104,7 @@ haploSimulate <- function(hp_str, Ne, tp, meancov=NULL, hp0 = NULL, benef_all=NU
       #apply selection
       for (i in 1:ncol(hp_str)){
         if(sum(hp_str[benef_all,i])>0){
-          fitness_hp[i] <- fitness_hp[i]*sum(wA[benef_all][as.logical(hp_str[benef_all,i])])
+          fitness_hp[i] <- fitness_hp[i]+sum(s[benef_all][as.logical(hp_str[benef_all,i])])
         }
       }
       p <- p*fitness_hp
