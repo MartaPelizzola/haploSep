@@ -31,7 +31,7 @@ Function for plotting objects from class haplo
  m <- haploSelect(data = Y)
  reconstruction <- haploSep(data = Y, nHaplo = m, stabEval = TRUE, bias = TRUE)
  
- plot.haplo(reconstruction, type = "both")
+ plot(reconstruction, type = "both")
 
 
 }
