@@ -24,3 +24,11 @@ Merle Behr (merle.behr@berkeley.edu)
 Housen Li (housen.li@mathematik.uni-goettingen.de)
 
 Marta Pelizzola (marta.pelizzola@vetmeduni.ac.at)
+
+## Citation
+If you find haploSep useful in your work, please cite:
+
+    Pelizzola, M., Behr, M., Li, H. et al.
+    Multiple haplotype reconstruction from allele frequency data.
+    Nat Comput Sci 1, 262–271 (2021).
+    https://doi.org/10.1038/s43588-021-00056-5
