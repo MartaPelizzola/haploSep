@@ -19,11 +19,11 @@ library(haploSep)
 ```
 
 # Authors
-Merle Behr (merle.behr@berkeley.edu)
+Merle Behr (merle.behr@informatik.uni-regensburg.de)
 
 Housen Li (housen.li@mathematik.uni-goettingen.de)
 
-Marta Pelizzola (marta.pelizzola@vetmeduni.ac.at)
+Marta Pelizzola (marta@math.au.dk)
 
 ## Citation
 If you find haploSep useful in your work, please cite:
